@@ -18,11 +18,7 @@ export default class Switch extends Component {
         return(
             <div className={ SwitchStyles.switch } >
                 <div className={ SwitchStyles.buttonWrapper } >
-                    <span 
-                        className={ buttonClassName }
-                        onClick={ this._toggleSwitch }
-                        >
-                    </span>
+                    <span className={ buttonClassName } onClick={ this._toggleSwitch } ></span>
                 </div>
             </div>
         );
