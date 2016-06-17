@@ -7,7 +7,6 @@ export default class List extends Component {
     };
 
     render() {
-        console.log(this.props.items)
         return(
             <section 
                 items={ this.props.items }

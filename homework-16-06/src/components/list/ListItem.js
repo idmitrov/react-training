@@ -10,7 +10,7 @@ export default class ListItem extends Component {
             <li>
                 <span>{ this.props.item.model }</span>
                 <span> - </span>
-                <span>{ this.props.item.price }</span>
+                <span>{ this.props.item.price }BGN</span>
             </li>
         );
     }
