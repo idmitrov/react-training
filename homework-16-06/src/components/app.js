@@ -14,12 +14,13 @@ let laptops = [
     { brand: "Asus", model: "Vivo Book", price: 300, type: "used" }
 ];
 
+// TODO: Filter and render with 2nd switch only new
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             switch: {
-                checked: false
+                used: true
             }
         }
     }
@@ -27,21 +28,40 @@ export default class App extends Component {
     render() {
         return(
             <div>
+                <p>Show only used laptops</p>
                 <Switch
-                    checked={ this.state.switch.checked }
+                    checked={ this.state.switch.used }
                     onToggle={ this.handleSwitch }
                 />
+
                 <List 
-                    items={ laptops }
+                    items={ this.generateItems() }
                 />
             </div>
         );
     }
 
-    handleSwitch = (isChecked) => {
+    generateItems = () => {
+        let filter = {
+            showUsed: this.state.switch.used && !this.state.switch.new,
+            showNew: !this.state.switch.used && this.state.switch.new
+        };
+
+        if (filter.showUsed) {
+            return laptops.filter(laptop => laptop.type === "used");
+        } else if (filter.showNew) {
+            return laptops.filter(laptop => laptop.type === "new");
+        }
+
+        // Return All
+        return laptops;
+    }
+
+    handleSwitch = (isCheckedUsed, ischeckedNew) => {
         this.setState({
             switch: {
-                checked: isChecked 
+                used: isCheckedUsed,
+                new: ischeckedNew
             }
         });
     }
