@@ -15,7 +15,7 @@ export default class ListItem extends Component {
             <li className={ ListStyles.listItem }>
                 <div className={ ListStyles.itemHeader }>
                     <h3 
-                        className={ ListStyles.itemTitle }>{ this.props.item.model } 
+                        className={ ListStyles.itemTitle }>{ this.props.item.brand } - { this.props.item.model } 
                         <span 
                             className={ ListStyles.label } 
                             >
