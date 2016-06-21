@@ -1,45 +1,65 @@
 .list {
+    margin: 0 -10px;
     width: 100%;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
 
     &:after {
         content: '';
         display: block;
         clear: both;
     }
+
+    @media screen and(max-width: 768px) {
+        margin: 0;
+    }
 }
 
 .listItem {
     float: left;
-    width: 25%;
+    margin: 10px;
+    width: calc(25% - 20px);
 
     @media screen and(max-width: 1280px) {
-        width: 50%;
+        width: calc(50% - 20px);
     }
 
-     @media screen and(max-width: 768px) {
+    @media screen and(max-width: 768px) {
         width: 100%;
+        margin: 0;
         float: none;
     }
 }
 
 .itemHeader {
-    text-align: left;
-    
+    h3 {
+        padding: 0 10px;
+    }
+
     .itemPreview {
-        text-align: center;
+        img {
+            width: 100%;
+        }
     }
 
     .itemTitle {
-        text-align: center;
+        color: #09F;
     }
 
     .label {
         margin-left: 10px;
         color: #0F0;
+        text-transform: uppercase;
+    }
+}
+
+.itemFooter {
+    padding: 10px;
+
+    .itemPrice {
+        color: #222;
         text-transform: uppercase;
     }
 }

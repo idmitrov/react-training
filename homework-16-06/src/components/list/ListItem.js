@@ -27,8 +27,15 @@ export default class ListItem extends Component {
                         <img src={ ListItem.defaultValues.defaultImage } />
                     </div>
                 </div>
-
-                <strong>{ this.props.item.price }BGN</strong>
+                <div 
+                    className={ ListStyles.itemFooter } 
+                    >
+                    <strong 
+                        className={ ListStyles.itemPrice }
+                        >
+                        { this.props.item.price }BGN
+                    </strong>
+                </div>
             </li>
         );
     }
