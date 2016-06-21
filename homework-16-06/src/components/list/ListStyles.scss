@@ -1,0 +1,45 @@
+.list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.listItem {
+    float: left;
+    width: 25%;
+
+    @media screen and(max-width: 1280px) {
+        width: 50%;
+    }
+
+     @media screen and(max-width: 768px) {
+        width: 100%;
+        float: none;
+    }
+}
+
+.itemHeader {
+    text-align: left;
+    
+    .itemPreview {
+        text-align: center;
+    }
+
+    .itemTitle {
+        text-align: center;
+    }
+
+    .label {
+        margin-left: 10px;
+        color: #0F0;
+        text-transform: uppercase;
+    }
+}

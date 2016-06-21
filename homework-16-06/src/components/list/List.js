@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ListItem from 'components/list/ListItem';
+import ListStyles from 'components/list/ListStyles.scss';
 
 export default class List extends Component {
     static propTypes = {
@@ -11,8 +12,8 @@ export default class List extends Component {
             <section 
                 items={ this.props.items }
             >
-                <h2>List:</h2>
-                <ul>
+                <h2>Laptops:</h2>
+                <ul className={ ListStyles.list } >
                     { this.renderItems(this.props.items) }
                 </ul>
             </section>
