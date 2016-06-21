@@ -8,7 +8,7 @@ export default class Switch extends Component {
     }
 
     static propTypes = {
-        checked: PropTypes.bool.isRequired,
+        checked: PropTypes.bool,
         onToggle: PropTypes.func.isRequired
     }
 
