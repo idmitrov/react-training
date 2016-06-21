@@ -10,6 +10,7 @@ export default class ListItem extends Component {
         defaultImage: "https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300"
     }
 
+    // TODO: Extract Details button as component
     render() {
         return(
             <li className={ ListStyles.listItem }>
@@ -27,6 +28,7 @@ export default class ListItem extends Component {
                         <img src={ ListItem.defaultValues.defaultImage } />
                     </div>
                 </div>
+
                 <div 
                     className={ ListStyles.itemFooter } 
                     >
@@ -35,6 +37,12 @@ export default class ListItem extends Component {
                         >
                         { this.props.item.price }BGN
                     </strong>
+
+                    <button
+                        className={ ListStyles.itemDetails }
+                        >
+                        Details
+                    </button>
                 </div>
             </li>
         );

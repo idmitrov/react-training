@@ -56,10 +56,22 @@
 }
 
 .itemFooter {
+    position: relative;
     padding: 10px;
+    text-align: right;
 
     .itemPrice {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        -moz-transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
         color: #222;
         text-transform: uppercase;
+    }
+
+    .itemDetails {
+        padding: 5px 10px;
     }
 }
